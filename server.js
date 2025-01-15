@@ -39,10 +39,10 @@ db.connect((err) => {
         process.stdout.write("\x1b[31mDatenbank-Ping fehlgeschlagen\x1b[0m\n");
       } else {
         // Überschreibe die vorherige Ausgabe und zeige die Reaktionszeit an
-        process.stdout.write(`\x1b[32mDatenbank-Ping erfolgreich: ${latency} ms\x1b[0m\r`);
+        process.stdout.write(`\x1b[32mDatenbank-Ping: ${latency} ms\x1b[0m\r`);
       }
     });
-  }, 5000); // Alle 5 Sekunden einen Ping senden
+  }, 500); // Alle 0,5 Sekunden einen Ping senden
 });
 
 // API-Route, um Daten abzurufen
